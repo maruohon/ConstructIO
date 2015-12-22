@@ -1,7 +1,7 @@
-/.gradle
-/.idea
-/eclipse
-/build
+.gradle/
+.idea/
+eclipse/
+build/
 
 /*-fml.txt
 /MinecraftForge-*.txt
@@ -13,6 +13,4 @@
 /Paulscode * License.txt
 /*.iml
 
-*.bak
-*.rhl
-/run
+run/
