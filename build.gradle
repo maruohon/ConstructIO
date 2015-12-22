@@ -21,13 +21,13 @@ plugins {
 }
 
 version = "1.0"
-<<<<<<< HEAD
+HEAD
 group= "com.Nitrodev.WarehouseStorage" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "WarehouseStorage"
-=======
+
 group= "com.Nitrodev.warehousestorage" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "warehousestorage"
->>>>>>> 0d3951cbda9bf2f9dd9d83c7b2357cbaaf07d7a5
+
 
 minecraft {
     version = "1.8-11.14.4.1577"
