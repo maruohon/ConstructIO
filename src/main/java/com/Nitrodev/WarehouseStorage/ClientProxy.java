@@ -1,9 +1,7 @@
 package com.Nitrodev.warehousestorage;
 
-import com.Nitrodev.warehousestorage.blocks.Voider;
+import com.Nitrodev.warehousestorage.blocks.ModBlocks;
 import com.Nitrodev.warehousestorage.items.ModItems;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -19,7 +17,7 @@ public class ClientProxy extends CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
 
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(voider), 0, new ModelResourceLocation(voider, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.voider), 0, new ModelResourceLocation(WarehouseStorage.MODID + ":" + "blockVoider", "inventory"));
     }
 
     @Override
