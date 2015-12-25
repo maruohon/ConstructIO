@@ -1,0 +1,16 @@
+.gradle/
+.idea/
+eclipse/
+build/
+
+/*-fml.txt
+/MinecraftForge-*.txt
+/README.txt
+/forge-*-changelog.txt
+/gradle
+/gradlew
+/gradlew.bat
+/Paulscode * License.txt
+/*.iml
+
+run/
