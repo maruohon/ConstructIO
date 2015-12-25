@@ -1,6 +1,14 @@
 {
-  "parent":"cube/all",
-  "textures": {
-    "all": "warehousestorage:blocks/blockVoider"
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "textures": {
+      "all": "warehousestorage:blocks/blockVoider.png"
+    },
+    "transform": "forge:default-block"
+  }
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
   }
 }
