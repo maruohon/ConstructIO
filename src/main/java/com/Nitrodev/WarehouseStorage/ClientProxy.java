@@ -1,6 +1,8 @@
 package com.Nitrodev.warehousestorage;
 
 import com.Nitrodev.warehousestorage.items.ModItems;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -41,4 +43,5 @@ public class ClientProxy extends CommonProxy {
         ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(WarehouseStorage.MODID + ":" + itemName, "inventory"));
         ModelBakery.addVariantName(item, WarehouseStorage.MODID + ":" + itemName);
     }
+
 }
