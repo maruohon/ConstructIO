@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
+  "modid": "warehousestorage",
+  "name": "Warehouse Storage",
   "description": "Example placeholder mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Nitrodev"],
+  "credits": "Sham1 from the IRC chat #minecraftforge for helping me with github related issues.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

@@ -1,4 +1,4 @@
-package com.Nitrodev.WarehouseStorage;
+package com.Nitrodev.warehousestorage;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -20,6 +20,8 @@ public class WarehouseStorage
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
         this.proxy.preInit(e);
+
+        proxy.registerModels();
     }
 
     @EventHandler

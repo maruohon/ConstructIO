@@ -1,4 +1,4 @@
-package com.Nitrodev.WarehouseStorage.items;
+package com.Nitrodev.warehousestorage.items;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;

@@ -1,6 +1,6 @@
-package com.Nitrodev.WarehouseStorage;
+package com.Nitrodev.warehousestorage;
 
-import com.Nitrodev.WarehouseStorage.items.ModItems;
+import com.Nitrodev.warehousestorage.items.ModItems;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -28,7 +28,8 @@ public class ClientProxy extends CommonProxy {
         super.postInit(e);
     }
 
-    private void registerModels() {
+    @Override
+    public void registerModels() {
         registerItemModel(ModItems.itemPlank, "item_plank");
     }
 

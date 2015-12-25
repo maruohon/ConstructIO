@@ -1,6 +1,6 @@
-package com.Nitrodev.WarehouseStorage;
+package com.Nitrodev.warehousestorage;
 
-import com.Nitrodev.WarehouseStorage.items.ModItems;
+import com.Nitrodev.warehousestorage.items.ModItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 /**
  * Created by Jukka on 22.12.2015.
  */
-public class CommonProxy {
+public abstract class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {
         ModItems.createItems();
@@ -21,4 +21,6 @@ public class CommonProxy {
     public void postInit(FMLPostInitializationEvent e){
 
     }
+
+    public abstract void registerModels();
 }
