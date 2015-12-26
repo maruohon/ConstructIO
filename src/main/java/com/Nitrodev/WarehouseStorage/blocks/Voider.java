@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class Voider extends Block {
 
-    public Voider(String unlocalisedName) {
+    public Voider() {
         super(Material.cactus);
 
         this.setUnlocalizedName("blockVoider");

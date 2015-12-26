@@ -1,5 +1,6 @@
 package com.Nitrodev.warehousestorage;
 
+import com.Nitrodev.warehousestorage.init.Wsblocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -21,6 +22,7 @@ public class WarehouseStorage
     public void preInit(FMLPreInitializationEvent e) {
         this.proxy.preInit(e);
 
+        Wsblocks.registerRenders();
         proxy.registerModels();
     }
 
