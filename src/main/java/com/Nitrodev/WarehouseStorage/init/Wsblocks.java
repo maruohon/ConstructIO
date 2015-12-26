@@ -3,9 +3,9 @@ package com.Nitrodev.warehousestorage.init;
 import com.Nitrodev.warehousestorage.WarehouseStorage;
 import com.Nitrodev.warehousestorage.blocks.Voider;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class Wsblocks {
@@ -26,6 +26,6 @@ public class Wsblocks {
 
     private static void registerRender(Block block, int meta, String blockName) {
         Item item = Item.getItemFromBlock(block);
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(WarehouseStorage.MODID + ":" + blockName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(WarehouseStorage.MODID + ":" + blockName, "inventory"));
     }
 }
