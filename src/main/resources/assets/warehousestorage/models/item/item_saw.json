@@ -1,0 +1,13 @@
+{
+  "parent":"builtin/generated",
+  "textures": {
+    "layer0":"warehousestorage:items/item_saw"
+  },
+  "display": {
+    "firstperson": {
+      "rotation": [ -30, -90, 0],
+      "translation": [0, 4, 0],
+      "scale": [ 1, 1, 1]
+    }
+  }
+}

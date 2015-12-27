@@ -24,8 +24,4 @@ public class ServerProxy extends CommonProxy {
         super.postInit(e);
     }
 
-    @Override
-    public void registerModels() {
-        //NO-OP
-    }
 }

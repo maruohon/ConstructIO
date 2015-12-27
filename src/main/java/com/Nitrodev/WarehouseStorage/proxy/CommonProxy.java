@@ -20,6 +20,4 @@ public abstract class CommonProxy {
     public void postInit(FMLPostInitializationEvent e){
 
     }
-
-    public abstract void registerModels();
 }

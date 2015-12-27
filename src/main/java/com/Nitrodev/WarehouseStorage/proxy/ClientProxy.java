@@ -29,17 +29,4 @@ public class ClientProxy extends CommonProxy {
         super.postInit(e);
     }
 
-    @Override
-    public void registerModels() {
-        registerItemModel(ModItems.itemPlank, "item_plank");
-    }
-
-    public void registerItemModel(final Item item, final String itemName) {
-        registerItemModel(item, 0, itemName);
-    }
-
-    public void registerItemModel(final Item item, int meta, final String itemName) {
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(WarehouseStorage.MODID + ":" + itemName, "inventory"));
-    }
-
 }

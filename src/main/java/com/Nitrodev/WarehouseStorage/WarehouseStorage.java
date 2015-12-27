@@ -1,6 +1,7 @@
 package com.nitrodev.warehousestorage;
 
 import com.nitrodev.warehousestorage.init.Wsblocks;
+import com.nitrodev.warehousestorage.init.Wsitems;
 import com.nitrodev.warehousestorage.proxy.CommonProxy;
 import com.nitrodev.warehousestorage.recipes.ModRecipes;
 import net.minecraftforge.fml.common.Mod;
@@ -25,8 +26,8 @@ public class WarehouseStorage
         this.proxy.preInit(e);
 
         Wsblocks.registerRenders();
-        proxy.registerModels();
-        ModRecipes.addRecipes();
+        Wsitems.registerModels();
+        ModRecipes.init();
     }
 
     @EventHandler
