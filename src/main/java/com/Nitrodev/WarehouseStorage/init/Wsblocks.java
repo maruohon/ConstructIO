@@ -1,7 +1,7 @@
-package com.Nitrodev.warehousestorage.init;
+package com.nitrodev.warehousestorage.init;
 
-import com.Nitrodev.warehousestorage.WarehouseStorage;
-import com.Nitrodev.warehousestorage.blocks.Voider;
+import com.nitrodev.warehousestorage.WarehouseStorage;
+import com.nitrodev.warehousestorage.blocks.Voider;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;

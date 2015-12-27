@@ -1,6 +1,7 @@
-package com.Nitrodev.warehousestorage;
+package com.nitrodev.warehousestorage.proxy;
 
-import com.Nitrodev.warehousestorage.items.ModItems;
+import com.nitrodev.warehousestorage.WarehouseStorage;
+import com.nitrodev.warehousestorage.items.ModItems;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;

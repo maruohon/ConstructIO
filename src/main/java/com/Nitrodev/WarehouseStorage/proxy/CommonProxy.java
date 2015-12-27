@@ -1,7 +1,7 @@
-package com.Nitrodev.warehousestorage;
+package com.nitrodev.warehousestorage.proxy;
 
-import com.Nitrodev.warehousestorage.init.Wsblocks;
-import com.Nitrodev.warehousestorage.items.ModItems;
+import com.nitrodev.warehousestorage.init.Wsblocks;
+import com.nitrodev.warehousestorage.items.ModItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

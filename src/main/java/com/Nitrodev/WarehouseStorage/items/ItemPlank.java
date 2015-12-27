@@ -1,4 +1,4 @@
-package com.Nitrodev.warehousestorage.items;
+package com.nitrodev.warehousestorage.items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
