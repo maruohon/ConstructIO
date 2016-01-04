@@ -14,7 +14,8 @@ public class ModRecipes {
     static ItemStack stick = new ItemStack(Items.stick);
     static ItemStack iron = new ItemStack(Items.iron_ingot);
     static ItemStack goldblock = new ItemStack(Blocks.gold_block);
-    static ItemStack endereye = new ItemStack(Items.ender_eye);
+    static ItemStack cactus = new ItemStack(Blocks.cactus);
+    static ItemStack hopper = new ItemStack(Blocks.hopper);
 
     public static void init() {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemPlank), saw, slab);
@@ -26,9 +27,9 @@ public class ModRecipes {
                 'i', iron, 's', stick);
         GameRegistry.addRecipe(
                 new ItemStack(Wsblocks.voider),
-                "g g",
-                " E ",
-                "g g",
-                'g', goldblock);
+                "ghg",
+                "hch",
+                "ghg",
+                'g', goldblock, 'c', cactus, 'h', hopper);
     }
 }
