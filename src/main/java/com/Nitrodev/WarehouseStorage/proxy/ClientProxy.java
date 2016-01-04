@@ -1,10 +1,5 @@
 package com.nitrodev.warehousestorage.proxy;
 
-import com.nitrodev.warehousestorage.WarehouseStorage;
-import com.nitrodev.warehousestorage.items.ModItems;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

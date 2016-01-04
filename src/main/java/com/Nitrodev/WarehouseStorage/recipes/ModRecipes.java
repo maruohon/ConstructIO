@@ -1,9 +1,9 @@
 package com.nitrodev.warehousestorage.recipes;
 
+import com.nitrodev.warehousestorage.init.Wsblocks;
 import com.nitrodev.warehousestorage.items.ModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -13,6 +13,8 @@ public class ModRecipes {
     static ItemStack slab = new ItemStack(Blocks.wooden_slab, 1, OreDictionary.WILDCARD_VALUE);
     static ItemStack stick = new ItemStack(Items.stick);
     static ItemStack iron = new ItemStack(Items.iron_ingot);
+    static ItemStack goldblock = new ItemStack(Blocks.gold_block);
+    static ItemStack endereye = new ItemStack(Items.ender_eye);
 
     public static void init() {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemPlank), saw, slab);
@@ -22,5 +24,11 @@ public class ModRecipes {
                 " is",
                 "  i",
                 'i', iron, 's', stick);
+        GameRegistry.addRecipe(
+                new ItemStack(Wsblocks.voider),
+                "g g",
+                " E ",
+                "g g",
+                'g', goldblock);
     }
 }
