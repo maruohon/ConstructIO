@@ -1,5 +1,6 @@
 package com.nitrodev.constructio;
 
+import com.nitrodev.constructio.gui.GuiHandler;
 import com.nitrodev.constructio.init.Cioblocks;
 import com.nitrodev.constructio.init.Cioitems;
 import com.nitrodev.constructio.proxy.CommonProxy;
@@ -10,6 +11,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @Mod(modid = ConstructIO.MODID, version = ConstructIO.VERSION, name = ConstructIO.NAME)
 public class ConstructIO
@@ -20,6 +22,8 @@ public class ConstructIO
 
     @SidedProxy(clientSide = "com.nitrodev.constructio.proxy.ClientProxy", serverSide = "com.nitrodev.constructio.proxy.ServerProxy")
     public static CommonProxy proxy;
+
+    private GuiHandler guiHandler = new GuiHandler();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
@@ -33,6 +37,8 @@ public class ConstructIO
     @EventHandler
     public void init(FMLInitializationEvent e) {
         this.proxy.init(e);
+
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, guiHandler);
     }
 
     @EventHandler

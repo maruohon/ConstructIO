@@ -13,7 +13,7 @@ public class GuiHandler implements IGuiHandler {
     public static final int GUI_Constructor = 0;
 
     @Override
-    public Object getServerGuiElement(int id, EntityPlayer entityPlayer, World world, int x, int y, int z) {
+    public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileEntity;
 
         switch (id) {
@@ -21,7 +21,7 @@ public class GuiHandler implements IGuiHandler {
                 tileEntity = world.getTileEntity(new BlockPos(x, y, z));
 
                 if (tileEntity instanceof TileConstructor) {
-                    return new ContainerConstructor((TileConstructor) tileEntity, entityPlayer.inventory);
+                    return new ContainerConstructor((TileConstructor) tileEntity, player.inventory);
                 }
                 break;
         }
