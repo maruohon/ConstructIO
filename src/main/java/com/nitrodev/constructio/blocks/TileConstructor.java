@@ -8,7 +8,7 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IChatComponent;
 
-public class Constructor extends TileEntity implements IInventory {
+public class TileConstructor extends TileEntity implements IInventory {
     private ItemStack[] stacks = new ItemStack[9];
 
     public int getSizeInventory() {

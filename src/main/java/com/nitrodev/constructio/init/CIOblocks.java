@@ -1,6 +1,7 @@
 package com.nitrodev.constructio.init;
 
 import com.nitrodev.constructio.ConstructIO;
+import com.nitrodev.constructio.blocks.BlockConstructor;
 import com.nitrodev.constructio.blocks.Voider;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -11,9 +12,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Cioblocks {
 
     public static Block voider = new Voider();
+    public static Block constructor = new BlockConstructor();
 
     public static void register() {
         GameRegistry.registerBlock(voider, "voider");
+        GameRegistry.registerBlock(constructor, "constructor");
     }
 
     public static void registerRenders() {
