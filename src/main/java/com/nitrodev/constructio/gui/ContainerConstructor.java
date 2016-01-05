@@ -9,25 +9,25 @@ import net.minecraft.item.ItemStack;
 public class ContainerConstructor extends Container {
     private IInventory constructorInventory;
 
-    public ContainerConstructor(IInventory p_i45799_1_, IInventory p_i45799_2_) {
-        this.constructorInventory = p_i45799_2_;
+    public ContainerConstructor(IInventory tileEntity, IInventory playerInv) {
+        this.constructorInventory = playerInv;
 
-        int lvt_3_3_;
-        int lvt_4_2_;
-        for(lvt_3_3_ = 0; lvt_3_3_ < 3; ++lvt_3_3_) {
-            for(lvt_4_2_ = 0; lvt_4_2_ < 3; ++lvt_4_2_) {
-                this.addSlotToContainer(new Slot(p_i45799_2_, lvt_4_2_ + lvt_3_3_ * 3, 62 + lvt_4_2_ * 18, 17 + lvt_3_3_ * 18));
+        int i;
+        int j;
+        for(i = 0; i < 3; ++i) {
+            for(j = 0; j < 3; ++j) {
+                this.addSlotToContainer(new Slot(playerInv, j + i * 3, 62 + j * 18, 17 + i * 18));
             }
         }
 
-        for(lvt_3_3_ = 0; lvt_3_3_ < 3; ++lvt_3_3_) {
-            for(lvt_4_2_ = 0; lvt_4_2_ < 9; ++lvt_4_2_) {
-                this.addSlotToContainer(new Slot(p_i45799_1_, lvt_4_2_ + lvt_3_3_ * 9 + 9, 8 + lvt_4_2_ * 18, 84 + lvt_3_3_ * 18));
+        for(i = 0; i < 3; ++i) {
+            for(j = 0; j < 9; ++j) {
+                this.addSlotToContainer(new Slot(tileEntity, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
             }
         }
 
-        for(lvt_3_3_ = 0; lvt_3_3_ < 9; ++lvt_3_3_) {
-            this.addSlotToContainer(new Slot(p_i45799_1_, lvt_3_3_, 8 + lvt_3_3_ * 18, 142));
+        for(i = 0; i < 9; ++i) {
+            this.addSlotToContainer(new Slot(tileEntity, i, 8 + i * 18, 142));
         }
 
     }
@@ -36,13 +36,13 @@ public class ContainerConstructor extends Container {
         return this.constructorInventory.isUseableByPlayer(player);
     }
 
-    public ItemStack transferStackInSlot(EntityPlayer p_transferStackInSlot_1_, int p_transferStackInSlot_2_) {
+    public ItemStack transferStackInSlot(EntityPlayer playerEntity, int i) {
         ItemStack lvt_3_1_ = null;
-        Slot lvt_4_1_ = (Slot)this.inventorySlots.get(p_transferStackInSlot_2_);
+        Slot lvt_4_1_ = (Slot)this.inventorySlots.get(i);
         if(lvt_4_1_ != null && lvt_4_1_.getHasStack()) {
             ItemStack lvt_5_1_ = lvt_4_1_.getStack();
             lvt_3_1_ = lvt_5_1_.copy();
-            if(p_transferStackInSlot_2_ < 9) {
+            if(i < 9) {
                 if(!this.mergeItemStack(lvt_5_1_, 9, 45, true)) {
                     return null;
                 }
@@ -60,7 +60,7 @@ public class ContainerConstructor extends Container {
                 return null;
             }
 
-            lvt_4_1_.onPickupFromSlot(p_transferStackInSlot_1_, lvt_5_1_);
+            lvt_4_1_.onPickupFromSlot(playerEntity, lvt_5_1_);
         }
 
         return lvt_3_1_;
