@@ -1,11 +1,11 @@
 {
   "parent":"builtin/generated",
   "textures": {
-    "layer0":"warehousestorage:items/item_saw"
+    "layer0":"constructio:items/item_hammer"
   },
   "display": {
     "firstperson": {
-      "rotation": [ -30, -90, 0],
+      "rotation": [0, 250, -10],
       "translation": [0, 4, 0],
       "scale": [ 1, 1, 1]
     }

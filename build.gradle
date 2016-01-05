@@ -22,8 +22,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = "1.0"
 
-group= "com.Nitrodev.warehousestorage" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "warehousestorage"
+group= "com.Nitrodev.constructio" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "constructio"
 
 
 minecraft {

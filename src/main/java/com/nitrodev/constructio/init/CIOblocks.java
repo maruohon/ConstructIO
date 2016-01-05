@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class Wsblocks {
+public class Cioblocks {
 
     public static Block voider = new Voider();
 

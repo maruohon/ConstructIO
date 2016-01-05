@@ -1,7 +1,7 @@
 package com.nitrodev.constructio;
 
-import com.nitrodev.constructio.init.Wsblocks;
-import com.nitrodev.constructio.init.Wsitems;
+import com.nitrodev.constructio.init.Cioblocks;
+import com.nitrodev.constructio.init.Cioitems;
 import com.nitrodev.constructio.proxy.CommonProxy;
 import com.nitrodev.constructio.recipes.ModRecipes;
 import net.minecraftforge.fml.common.Mod;
@@ -25,8 +25,8 @@ public class ConstructIO
     public void preInit(FMLPreInitializationEvent e) {
         this.proxy.preInit(e);
 
-        Wsblocks.registerRenders();
-        Wsitems.registerModels();
+        Cioblocks.registerRenders();
+        Cioitems.registerModels();
         ModRecipes.init();
     }
 

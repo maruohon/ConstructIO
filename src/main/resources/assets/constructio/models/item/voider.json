@@ -1,5 +1,5 @@
 {
-  "parent":"warehousestorage:block/voider",
+  "parent":"constructio:block/voider",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

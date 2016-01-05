@@ -1,6 +1,6 @@
 {
   "parent":"block/cube_all",
   "textures": {
-    "all": "warehousestorage:blocks/blockVoider"
+    "all": "constructio:blocks/blockVoider"
   }
 }

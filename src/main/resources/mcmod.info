@@ -1,8 +1,8 @@
 [
 {
-  "modid": "warehousestorage",
-  "name": "Warehouse Storage",
-  "description": "Example placeholder mod.",
+  "modid": "constructio",
+  "name": "ConstructIO",
+  "description": "Mod that brings the realism or making furniture and other wooden structures to Minecraft.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
