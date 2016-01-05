@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class Voider extends Block {
 
     public Voider() {
-        super(Material.cactus);
+        super(Material.iron);
 
         this.setUnlocalizedName("blockVoider");
         this.setCreativeTab(CreativeTabs.tabBlock);
