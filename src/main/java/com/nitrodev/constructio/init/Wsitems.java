@@ -1,7 +1,7 @@
-package com.nitrodev.warehousestorage.init;
+package com.nitrodev.constructio.init;
 
-import com.nitrodev.warehousestorage.WarehouseStorage;
-import com.nitrodev.warehousestorage.items.ModItems;
+import com.nitrodev.constructio.ConstructIO;
+import com.nitrodev.constructio.items.ModItems;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -11,6 +11,8 @@ public class Wsitems {
     public static void registerModels() {
         registerItemModel(ModItems.itemPlank, "item_plank");
         registerItemModel(ModItems.itemSaw, "item_saw");
+        registerItemModel(ModItems.itemKnife, "item_knife");
+        registerItemModel(ModItems.itemHammer, "item_hammer");
     }
 
     public static void registerItemModel(final Item item, final String itemName) {
@@ -18,6 +20,6 @@ public class Wsitems {
     }
 
     public static void registerItemModel(final Item item, int meta, final String itemName) {
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(WarehouseStorage.MODID + ":" + itemName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(ConstructIO.MODID + ":" + itemName, "inventory"));
     }
 }

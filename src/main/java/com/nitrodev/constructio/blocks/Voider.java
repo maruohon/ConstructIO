@@ -1,4 +1,4 @@
-package com.nitrodev.warehousestorage.blocks;
+package com.nitrodev.constructio.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

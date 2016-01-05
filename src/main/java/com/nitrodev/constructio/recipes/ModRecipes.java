@@ -1,7 +1,7 @@
-package com.nitrodev.warehousestorage.recipes;
+package com.nitrodev.constructio.recipes;
 
-import com.nitrodev.warehousestorage.init.Wsblocks;
-import com.nitrodev.warehousestorage.items.ModItems;
+import com.nitrodev.constructio.init.Wsblocks;
+import com.nitrodev.constructio.items.ModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

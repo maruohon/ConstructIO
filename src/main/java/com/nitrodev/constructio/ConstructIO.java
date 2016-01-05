@@ -1,9 +1,9 @@
-package com.nitrodev.warehousestorage;
+package com.nitrodev.constructio;
 
-import com.nitrodev.warehousestorage.init.Wsblocks;
-import com.nitrodev.warehousestorage.init.Wsitems;
-import com.nitrodev.warehousestorage.proxy.CommonProxy;
-import com.nitrodev.warehousestorage.recipes.ModRecipes;
+import com.nitrodev.constructio.init.Wsblocks;
+import com.nitrodev.constructio.init.Wsitems;
+import com.nitrodev.constructio.proxy.CommonProxy;
+import com.nitrodev.constructio.recipes.ModRecipes;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,14 +11,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = WarehouseStorage.MODID, version = WarehouseStorage.VERSION, name = WarehouseStorage.NAME)
-public class WarehouseStorage
+@Mod(modid = ConstructIO.MODID, version = ConstructIO.VERSION, name = ConstructIO.NAME)
+public class ConstructIO
 {
-    public static final String MODID = "warehousestorage";
+    public static final String MODID = "constructio";
     public static final String VERSION = "1.0";
-    public static final String NAME = "Warehouse Storage";
+    public static final String NAME = "ConstructIO";
 
-    @SidedProxy(clientSide = "com.nitrodev.warehousestorage.proxy.ClientProxy", serverSide = "com.nitrodev.warehousestorage.proxy.ServerProxy")
+    @SidedProxy(clientSide = "com.nitrodev.constructio.proxy.ClientProxy", serverSide = "com.nitrodev.constructio.proxy.ServerProxy")
     public static CommonProxy proxy;
 
     @EventHandler

@@ -1,7 +1,7 @@
-package com.nitrodev.warehousestorage.init;
+package com.nitrodev.constructio.init;
 
-import com.nitrodev.warehousestorage.WarehouseStorage;
-import com.nitrodev.warehousestorage.blocks.Voider;
+import com.nitrodev.constructio.ConstructIO;
+import com.nitrodev.constructio.blocks.Voider;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -26,6 +26,6 @@ public class Wsblocks {
 
     private static void registerRender(Block block, int meta, String blockName) {
         Item item = Item.getItemFromBlock(block);
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(WarehouseStorage.MODID + ":" + blockName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(ConstructIO.MODID + ":" + blockName, "inventory"));
     }
 }

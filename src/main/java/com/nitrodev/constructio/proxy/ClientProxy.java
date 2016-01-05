@@ -1,4 +1,4 @@
-package com.nitrodev.warehousestorage.proxy;
+package com.nitrodev.constructio.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
