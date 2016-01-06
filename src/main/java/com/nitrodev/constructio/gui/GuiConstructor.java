@@ -17,13 +17,19 @@ public class GuiConstructor extends GuiContainer {
         this.playerInventory = playerInv;
         this.constructorInventory = tileEntity;
 
+        this.ySize = 176;
+        this.xSize = 166;
+
     }
+
+    @Override
     protected void drawGuiContainerForegroundLayer(int i, int j) {
         String lvt_3_1_ = this.constructorInventory.getDisplayName().getUnformattedText();
         this.fontRendererObj.drawString(lvt_3_1_, this.xSize / 2 - this.fontRendererObj.getStringWidth(lvt_3_1_) / 2, 6, 4210752);
         this.fontRendererObj.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
     }
 
+    @Override
     protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         this.mc.getTextureManager().bindTexture(constructorGuiTextures);

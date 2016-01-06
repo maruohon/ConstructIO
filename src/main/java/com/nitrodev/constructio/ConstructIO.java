@@ -20,6 +20,9 @@ public class ConstructIO
     public static final String VERSION = "1.0";
     public static final String NAME = "ConstructIO";
 
+    @Mod.Instance(value = ConstructIO.MODID)
+    public static ConstructIO instance;
+
     @SidedProxy(clientSide = "com.nitrodev.constructio.proxy.ClientProxy", serverSide = "com.nitrodev.constructio.proxy.ServerProxy")
     public static CommonProxy proxy;
 
@@ -29,6 +32,7 @@ public class ConstructIO
     public void preInit(FMLPreInitializationEvent e) {
         this.proxy.preInit(e);
 
+        Cioblocks.loadTE();
         Cioblocks.registerRenders();
         Cioitems.registerModels();
         ModRecipes.init();
@@ -45,4 +49,5 @@ public class ConstructIO
     public void postInit(FMLPostInitializationEvent e) {
         this.proxy.postInit(e);
     }
+
 }

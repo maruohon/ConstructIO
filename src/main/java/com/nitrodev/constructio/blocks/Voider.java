@@ -1,5 +1,6 @@
 package com.nitrodev.constructio.blocks;
 
+import com.nitrodev.constructio.ConstructioTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -13,11 +14,13 @@ import net.minecraft.world.World;
 
 public class Voider extends Block {
 
+    public static CreativeTabs constructioTab = new ConstructioTab(CreativeTabs.getNextID(), "constructio");
+
     public Voider() {
         super(Material.iron);
 
         this.setUnlocalizedName("blockVoider");
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setCreativeTab(constructioTab);
     }
 
     public AxisAlignedBB getCollisionBoundingBox(World p_getCollisionBoundingBox_1_, BlockPos p_getCollisionBoundingBox_2_, IBlockState p_getCollisionBoundingBox_3_) {

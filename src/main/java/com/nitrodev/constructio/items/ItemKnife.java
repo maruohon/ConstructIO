@@ -1,16 +1,19 @@
 package com.nitrodev.constructio.items;
 
+import com.nitrodev.constructio.ConstructioTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class ItemKnife extends Item {
 
+    public static CreativeTabs constructioTab = new ConstructioTab(CreativeTabs.getNextID(), "constructio");
+
     public ItemKnife(String unlocalisedName) {
         super();
 
         this.setUnlocalizedName("item_knife");
-        this.setCreativeTab(CreativeTabs.tabTools);
+        this.setCreativeTab(constructioTab);
         this.setMaxDamage(100);
 
     }

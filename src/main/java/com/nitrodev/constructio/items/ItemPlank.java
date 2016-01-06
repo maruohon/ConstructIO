@@ -1,5 +1,6 @@
 package com.nitrodev.constructio.items;
 
+import com.nitrodev.constructio.ConstructioTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -8,10 +9,12 @@ import net.minecraft.item.Item;
  */
 public class ItemPlank extends Item {
 
+    public static CreativeTabs constructioTab = new ConstructioTab(CreativeTabs.getNextID(), "constructio");
+
     public ItemPlank(String unlocalizedName){
         super();
 
         this.setUnlocalizedName("item_plank");
-        this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setCreativeTab(constructioTab);
     }
 }

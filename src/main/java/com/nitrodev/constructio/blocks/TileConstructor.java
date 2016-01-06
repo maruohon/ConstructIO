@@ -21,20 +21,20 @@ public class TileConstructor extends TileEntity implements IInventory {
 
     public ItemStack decrStackSize(int index, int count) {
         if (this.stacks[index] != null) {
-            ItemStack lvt_3_2_;
+            ItemStack itemStack;
             if (this.stacks[index].stackSize <= count) {
-                lvt_3_2_ = this.stacks[index];
+                itemStack = this.stacks[index];
                 this.stacks[index] = null;
                 this.markDirty();
-                return lvt_3_2_;
+                return itemStack;
             } else {
-                lvt_3_2_ = this.stacks[index].splitStack(count);
+                itemStack = this.stacks[index].splitStack(count);
                 if (this.stacks[index].stackSize == 0) {
                     this.stacks[index] = null;
                 }
 
                 this.markDirty();
-                return lvt_3_2_;
+                return itemStack;
             }
         } else {
             return null;
@@ -74,9 +74,9 @@ public class TileConstructor extends TileEntity implements IInventory {
         return null;
     }
 
-    public void readFromNBT(NBTTagCompound p_readFromNBT_1_) {
-        super.readFromNBT(p_readFromNBT_1_);
-        NBTTagList lvt_2_1_ = p_readFromNBT_1_.getTagList("Items", 10);
+    public void readFromNBT(NBTTagCompound compound) {
+        super.readFromNBT(compound);
+        NBTTagList lvt_2_1_ = compound.getTagList("Items", 10);
         this.stacks = new ItemStack[this.getSizeInventory()];
 
         for (int lvt_3_1_ = 0; lvt_3_1_ < lvt_2_1_.tagCount(); ++lvt_3_1_) {
@@ -89,8 +89,8 @@ public class TileConstructor extends TileEntity implements IInventory {
 
     }
 
-    public void writeToNBT(NBTTagCompound p_writeToNBT_1_) {
-        super.writeToNBT(p_writeToNBT_1_);
+    public void writeToNBT(NBTTagCompound compound) {
+        super.writeToNBT(compound);
         NBTTagList lvt_2_1_ = new NBTTagList();
 
         for (int lvt_3_1_ = 0; lvt_3_1_ < this.stacks.length; ++lvt_3_1_) {

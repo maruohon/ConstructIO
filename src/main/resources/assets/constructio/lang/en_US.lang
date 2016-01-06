@@ -3,3 +3,5 @@ item.item_plank.name=Plank
 item.item_saw.name=Saw
 //Blocks
 tile.blockVoider.name=Voider
+
+itemGroup.constructio=ConstructIO
