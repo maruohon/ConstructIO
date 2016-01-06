@@ -2,7 +2,6 @@ package com.nitrodev.constructio.gui;
 
 import com.nitrodev.constructio.blocks.TileConstructor;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
@@ -21,7 +20,7 @@ public class GuiHandler implements IGuiHandler {
                 tileEntity = world.getTileEntity(new BlockPos(x, y, z));
 
                 if (tileEntity instanceof TileConstructor) {
-                    return new ContainerConstructor((TileConstructor) tileEntity, player.inventory);
+                    return new ContainerConstructor(player.inventory, (TileConstructor) tileEntity);
                 }
                 break;
         }
