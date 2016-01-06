@@ -19,18 +19,18 @@ public class TileConstructor extends TileEntity implements IInventory {
         return this.stacks[index];
     }
 
-    public ItemStack decrStackSize(int p_decrStackSize_1_, int p_decrStackSize_2_) {
-        if (this.stacks[p_decrStackSize_1_] != null) {
+    public ItemStack decrStackSize(int index, int count) {
+        if (this.stacks[index] != null) {
             ItemStack lvt_3_2_;
-            if (this.stacks[p_decrStackSize_1_].stackSize <= p_decrStackSize_2_) {
-                lvt_3_2_ = this.stacks[p_decrStackSize_1_];
-                this.stacks[p_decrStackSize_1_] = null;
+            if (this.stacks[index].stackSize <= count) {
+                lvt_3_2_ = this.stacks[index];
+                this.stacks[index] = null;
                 this.markDirty();
                 return lvt_3_2_;
             } else {
-                lvt_3_2_ = this.stacks[p_decrStackSize_1_].splitStack(p_decrStackSize_2_);
-                if (this.stacks[p_decrStackSize_1_].stackSize == 0) {
-                    this.stacks[p_decrStackSize_1_] = null;
+                lvt_3_2_ = this.stacks[index].splitStack(count);
+                if (this.stacks[index].stackSize == 0) {
+                    this.stacks[index] = null;
                 }
 
                 this.markDirty();
