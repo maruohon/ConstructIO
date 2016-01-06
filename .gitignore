@@ -12,5 +12,6 @@ build/
 /gradlew.bat
 /Paulscode * License.txt
 /*.iml
+/*.hprof
 
 run/
