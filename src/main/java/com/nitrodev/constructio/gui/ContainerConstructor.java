@@ -4,6 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
 
 public class ContainerConstructor extends Container {
@@ -13,23 +14,24 @@ public class ContainerConstructor extends Container {
 
     public ContainerConstructor(IInventory playerInv, IInventory tileEntity) {
         this.constructorInventory = tileEntity;
+        this.addSlotToContainer(new Slot(tileEntity, 0, 150, 53));
 
         int i;
         int j;
         for(i = 0; i < 5; ++i) {
             for(j = 0; j < 5; ++j) {
-                this.addSlotToContainer(new Slot(tileEntity, j + i * 3, 30 + j * 18, 17 + i * 18));
+                this.addSlotToContainer(new Slot(tileEntity, j + i * 5, 26 + j * 18, 17 + i * 18));
             }
         }
 
         for(i = 0; i < 3; ++i) {
             for(j = 0; j < 9; ++j) {
-                this.addSlotToContainer(new Slot(playerInv, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                this.addSlotToContainer(new Slot(playerInv, j + i * 9 + 9, 8 + j * 18, 117 + i * 18));
             }
         }
 
         for(i = 0; i < 9; ++i) {
-            this.addSlotToContainer(new Slot(playerInv, i, 8 + i * 18, 142));
+            this.addSlotToContainer(new Slot(playerInv, i, 8 + i * 18, 175));
         }
 
     }

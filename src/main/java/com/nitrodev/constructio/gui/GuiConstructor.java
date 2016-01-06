@@ -17,16 +17,16 @@ public class GuiConstructor extends GuiContainer {
         this.playerInventory = playerInv;
         this.constructorInventory = tileEntity;
 
-        this.ySize = 220;
-        this.xSize = 230;
+        this.ySize = 202;
+        this.xSize = 212;
 
     }
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         String name = this.constructorInventory.getDisplayName().getUnformattedText();
-        this.fontRendererObj.drawString(name, this.xSize / 2 - this.fontRendererObj.getStringWidth(name) / 2, 6, 4210752);
-        this.fontRendererObj.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
+        this.fontRendererObj.drawString(name, 26, 6, 4210752);
+        this.fontRendererObj.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, 107, 4210752);
     }
 
     @Override
