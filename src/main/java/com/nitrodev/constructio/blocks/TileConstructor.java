@@ -15,8 +15,8 @@ public class TileConstructor extends TileEntity implements IInventory {
         return 9;
     }
 
-    public ItemStack getStackInSlot(int p_getStackInSlot_1_) {
-        return this.stacks[p_getStackInSlot_1_];
+    public ItemStack getStackInSlot(int index) {
+        return this.stacks[index];
     }
 
     public ItemStack decrStackSize(int p_decrStackSize_1_, int p_decrStackSize_2_) {
