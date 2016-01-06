@@ -9,7 +9,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IChatComponent;
 
 public class TileConstructor extends TileEntity implements IInventory {
-    private ItemStack[] stacks = new ItemStack[9];
+    private ItemStack[] stacks = new ItemStack[8];
 
     public int getSizeInventory() {
         return 9;
