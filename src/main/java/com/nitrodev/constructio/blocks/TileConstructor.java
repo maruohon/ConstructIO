@@ -11,7 +11,7 @@ import net.minecraft.util.IChatComponent;
 
 public class TileConstructor extends TileEntity implements IInventory {
 
-    private ItemStack[] stacks = new ItemStack[9];
+    private ItemStack[] stacks = new ItemStack[36];
 
     public int getSizeInventory() {
         return stacks.length;

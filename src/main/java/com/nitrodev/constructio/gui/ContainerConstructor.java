@@ -16,9 +16,9 @@ public class ContainerConstructor extends Container {
 
         int i;
         int j;
-        for(i = 0; i < 3; ++i) {
-            for(j = 0; j < 3; ++j) {
-                this.addSlotToContainer(new Slot(tileEntity, j + i * 3, 62 + j * 18, 17 + i * 18));
+        for(i = 0; i < 5; ++i) {
+            for(j = 0; j < 5; ++j) {
+                this.addSlotToContainer(new Slot(tileEntity, j + i * 3, 30 + j * 18, 17 + i * 18));
             }
         }
 

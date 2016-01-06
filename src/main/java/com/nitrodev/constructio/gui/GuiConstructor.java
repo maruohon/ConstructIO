@@ -13,12 +13,12 @@ public class GuiConstructor extends GuiContainer {
     public IInventory constructorInventory;
 
     public GuiConstructor(InventoryPlayer playerInv, TileConstructor tileEntity) {
-        super(new ContainerConstructor(tileEntity, playerInv));
+        super(new ContainerConstructor(playerInv, tileEntity));
         this.playerInventory = playerInv;
         this.constructorInventory = tileEntity;
 
-        this.ySize = 176;
-        this.xSize = 176;
+        this.ySize = 220;
+        this.xSize = 230;
 
     }
 
