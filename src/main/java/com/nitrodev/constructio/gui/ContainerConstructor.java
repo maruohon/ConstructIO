@@ -11,7 +11,7 @@ public class ContainerConstructor extends Container {
     static final int MachineSlots = 9;
     static final int PlayerSlots = 9*4;
 
-    public ContainerConstructor(IInventory tileEntity, IInventory playerInv) {
+    public ContainerConstructor(IInventory playerInv, IInventory tileEntity) {
         this.constructorInventory = playerInv;
 
         int i;

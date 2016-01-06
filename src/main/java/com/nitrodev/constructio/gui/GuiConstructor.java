@@ -8,7 +8,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiConstructor extends GuiContainer {
-    private static final ResourceLocation constructorGuiTextures = new ResourceLocation("textures/gui/constructor.png");
+    private static final ResourceLocation constructorGuiTextures = new ResourceLocation("constructio:textures/gui/constructor.png");
     private final InventoryPlayer playerInventory;
     public IInventory constructorInventory;
 
