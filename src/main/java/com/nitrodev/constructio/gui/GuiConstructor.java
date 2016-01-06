@@ -18,14 +18,14 @@ public class GuiConstructor extends GuiContainer {
         this.constructorInventory = tileEntity;
 
         this.ySize = 176;
-        this.xSize = 166;
+        this.xSize = 176;
 
     }
 
     @Override
-    protected void drawGuiContainerForegroundLayer(int i, int j) {
-        String lvt_3_1_ = this.constructorInventory.getDisplayName().getUnformattedText();
-        this.fontRendererObj.drawString(lvt_3_1_, this.xSize / 2 - this.fontRendererObj.getStringWidth(lvt_3_1_) / 2, 6, 4210752);
+    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+        String name = this.constructorInventory.getDisplayName().getUnformattedText();
+        this.fontRendererObj.drawString(name, this.xSize / 2 - this.fontRendererObj.getStringWidth(name) / 2, 6, 4210752);
         this.fontRendererObj.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
     }
 
@@ -37,4 +37,5 @@ public class GuiConstructor extends GuiContainer {
         int lvt_5_1_ = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(lvt_4_1_, lvt_5_1_, 0, 0, this.xSize, this.ySize);
     }
+
 }
