@@ -13,12 +13,14 @@ public class Cioitems {
     public static Item itemSaw;
     public static Item itemKnife;
     public static Item itemHammer;
+    public static Item itemFabric;
 
     public static void register() {
         GameRegistry.registerItem(itemPlank = new ItemPlank("item_plank"), "item_plank");
         GameRegistry.registerItem(itemSaw = new ItemSaw("item_saw"), "item_saw");
         GameRegistry.registerItem(itemKnife = new ItemKnife("item_knife"), "item_knife");
         GameRegistry.registerItem(itemHammer = new ItemHammer("item_hammer"), "item_hammer");
+        GameRegistry.registerItem(itemFabric = new ItemFabric("item_fabric"), "item_fabric");
     }
 
     public static void registerModels() {

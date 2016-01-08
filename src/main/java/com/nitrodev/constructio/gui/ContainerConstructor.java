@@ -1,26 +1,30 @@
 package com.nitrodev.constructio.gui;
 
+import com.nitrodev.constructio.recipes.CiocraftManager;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
-import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class ContainerConstructor extends Container {
+
+    public EntityPlayer player;
+    public InventoryCrafting craftMatrix = new InventoryCrafting(this, 5, 5);
+    public IInventory craftResult = new InventoryCraftResult();
     private IInventory constructorInventory;
+    private World worldObj;
     static final int MachineSlots = 9;
     static final int PlayerSlots = 9*4;
 
     public ContainerConstructor(IInventory playerInv, IInventory tileEntity) {
         this.constructorInventory = tileEntity;
-        this.addSlotToContainer(new Slot(tileEntity, 0, 150, 53));
+        this.addSlotToContainer(new SlotCrafting(player, this.craftMatrix, this.craftResult, 0, 150, 53));
 
         int i;
         int j;
         for(i = 0; i < 5; ++i) {
             for(j = 0; j < 5; ++j) {
-                this.addSlotToContainer(new Slot(tileEntity, j + i * 5, 26 + j * 18, 17 + i * 18));
+                this.addSlotToContainer(new Slot(this.craftMatrix, j + i * 5, 26 + j * 18, 17 + i * 18));
             }
         }
 
@@ -34,6 +38,12 @@ public class ContainerConstructor extends Container {
             this.addSlotToContainer(new Slot(playerInv, i, 8 + i * 18, 175));
         }
 
+        this.OnCraftMatrixChanged(this.craftMatrix);
+
+    }
+
+    private void OnCraftMatrixChanged(InventoryCrafting craftMatrix) {
+        this.craftResult.setInventorySlotContents(0, CiocraftManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
     }
 
     public boolean canInteractWith(EntityPlayer player) {
