@@ -1,3 +1,4 @@
+
 package com.nitrodev.constructio.gui;
 
 import com.nitrodev.constructio.recipes.CiocraftManager;
@@ -43,7 +44,7 @@ public class ContainerConstructor extends Container {
     }
 
     private void OnCraftMatrixChanged(InventoryCrafting craftMatrix) {
-        this.craftResult.setInventorySlotContents(0, CiocraftManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
+
     }
 
     public boolean canInteractWith(EntityPlayer player) {

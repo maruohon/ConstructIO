@@ -1,5 +1,6 @@
 package com.nitrodev.constructio.items;
 
+import com.nitrodev.constructio.ConstructIO;
 import com.nitrodev.constructio.ConstructioTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -9,13 +10,12 @@ import java.util.Random;
 
 public class ItemSaw extends Item {
 
-    public static CreativeTabs constructioTab = new ConstructioTab(CreativeTabs.getNextID(), "constructio");
 
     public ItemSaw(String unlocalisedName) {
         super();
 
         this.setUnlocalizedName("item_saw");
-        this.setCreativeTab(constructioTab);
+        this.setCreativeTab(ConstructIO.tabconstructio);
         this.setMaxDamage(10);
     }
 

@@ -1,5 +1,6 @@
 package com.nitrodev.constructio.items;
 
+import com.nitrodev.constructio.ConstructIO;
 import com.nitrodev.constructio.ConstructioTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -7,14 +8,14 @@ import net.minecraft.item.ItemStack;
 
 public class ItemHammer extends Item {
 
-    public static CreativeTabs constructioTab = new ConstructioTab(CreativeTabs.getNextID(), "constructio");
+
 
     public ItemHammer(String unlocalisedName) {
         super();
 
         this.setUnlocalizedName("item_hammer");
         this.setMaxDamage(100);
-        this.setCreativeTab(constructioTab);
+        this.setCreativeTab(ConstructIO.tabconstructio);
     }
 
     @Override

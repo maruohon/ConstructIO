@@ -9,8 +9,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ConstructioTab extends CreativeTabs {
 
-    public ConstructioTab(int index, String label) {
-        super(index, label);
+    public ConstructioTab(String label) {
+        super(label);
     }
 
     @SideOnly(Side.CLIENT)

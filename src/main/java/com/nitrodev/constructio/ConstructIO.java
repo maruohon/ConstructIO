@@ -20,6 +20,7 @@ public class ConstructIO
     public static final String MODID = "constructio";
     public static final String VERSION = "1.0";
     public static final String NAME = "ConstructIO";
+    public static final ConstructioTab tabconstructio = new ConstructioTab("tabConstructio");
 
     @Mod.Instance(value = ConstructIO.MODID)
     public static ConstructIO instance;
