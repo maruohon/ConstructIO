@@ -1,4 +1,4 @@
-package com.nitrodev.constructio.recipes;
+/*package com.nitrodev.constructio.recipes;
 
 import com.google.common.collect.Lists;
 import net.minecraft.item.ItemStack;
@@ -53,4 +53,5 @@ public class CiocraftManager {
     }
 
 }
+*/
 

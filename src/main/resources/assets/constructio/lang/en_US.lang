@@ -4,5 +4,6 @@ item.item_saw.name=Saw
 //Blocks
 tile.blockVoider.name=Voider
 tile.blockConstructor.name=Constructor
+tile.woodenCt.name=Wooden Construction Block
 
 itemGroup.tabConstructio=ConstructIO

@@ -1,28 +1,24 @@
-
 package com.nitrodev.constructio.gui;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
 
-public class ContainerConstructor extends Container {
+public class ContainerWoodencrate extends Container {
 
     public EntityPlayer player;
-    public InventoryCrafting craftMatrix = new InventoryCrafting(this, 5, 5);
-    public IInventory craftResult = new InventoryCraftResult();
-    private IInventory constructorInventory;
-    static final int MachineSlots = 9;
+    private IInventory woodencrateInventory;
+    static final int MachineSlots = 36;
     static final int PlayerSlots = 9*4;
 
-    public ContainerConstructor(IInventory playerInv, IInventory tileEntity) {
-        this.constructorInventory = tileEntity;
-        this.addSlotToContainer(new SlotCrafting(player, this.craftMatrix, this.craftResult, 0, 150, 53));
+    public ContainerWoodencrate(IInventory playerInv, IInventory tileEntity) {
+        this.woodencrateInventory = tileEntity;
 
         int i;
         int j;
-        for(i = 0; i < 5; ++i) {
-            for(j = 0; j < 5; ++j) {
-                this.addSlotToContainer(new Slot(this.craftMatrix, j + i * 5, 26 + j * 18, 17 + i * 18));
+        for(i = 0; i < 6; ++i) {
+            for(j = 0; j < 6; ++j) {
+                this.addSlotToContainer(new Slot(tileEntity, j + i * 6, 26 + j * 18, 17 + i * 18));
             }
         }
 
@@ -36,16 +32,10 @@ public class ContainerConstructor extends Container {
             this.addSlotToContainer(new Slot(playerInv, i, 8 + i * 18, 175));
         }
 
-        this.OnCraftMatrixChanged(this.craftMatrix);
-
-    }
-
-    private void OnCraftMatrixChanged(InventoryCrafting craftMatrix) {
-
     }
 
     public boolean canInteractWith(EntityPlayer player) {
-        return this.constructorInventory.isUseableByPlayer(player);
+        return this.woodencrateInventory.isUseableByPlayer(player);
     }
 
     //For shift-clicking from the inventory

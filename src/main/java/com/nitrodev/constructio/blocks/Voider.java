@@ -36,7 +36,7 @@ public class Voider extends Block {
     }
 
     public AxisAlignedBB getCollisionBoundingBox(World p_getCollisionBoundingBox_1_, BlockPos p_getCollisionBoundingBox_2_, IBlockState p_getCollisionBoundingBox_3_) {
-        float f = 0.0625F;
+        float f = 1.0F;
         return new AxisAlignedBB((double)((float)p_getCollisionBoundingBox_2_.getX() + f), (double)p_getCollisionBoundingBox_2_.getY(), (double)((float)p_getCollisionBoundingBox_2_.getZ() + f), (double)((float)(p_getCollisionBoundingBox_2_.getX() + 1) - f), (double)((float)(p_getCollisionBoundingBox_2_.getY() + 1) - f), (double)((float)(p_getCollisionBoundingBox_2_.getZ() + 1) - f));
     }
 

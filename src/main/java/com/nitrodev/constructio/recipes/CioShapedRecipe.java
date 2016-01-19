@@ -1,4 +1,4 @@
-package com.nitrodev.constructio.recipes;
+/*package com.nitrodev.constructio.recipes;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
@@ -109,4 +109,4 @@ public class CioShapedRecipe extends ShapedRecipes {
     public ItemStack getRecipeOutput() {
         return this.recipeOutput;
     }
-}
+}*/
