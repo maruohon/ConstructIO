@@ -1,12 +1,11 @@
-package com.nitrodev.constructio.items;
+package com.nitrodev.constructio.blocks;
 
 import com.nitrodev.constructio.ConstructIO;
 import net.minecraft.item.Item;
 
-public class ItemFabric extends Item {
+public class SmallWoodenShell extends Item {
 
-
-    public ItemFabric(String unlocalisedName) {
+    public SmallWoodenShell(String unlocalisedName) {
         super();
 
         this.setUnlocalizedName(unlocalisedName);

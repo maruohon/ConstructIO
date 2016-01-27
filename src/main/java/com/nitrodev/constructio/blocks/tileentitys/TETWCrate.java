@@ -1,4 +1,4 @@
-package com.nitrodev.constructio.blocks.storage;
+package com.nitrodev.constructio.blocks.tileentitys;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -9,9 +9,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IChatComponent;
 
-public class TECrateMaster extends TileEntity implements IInventory {
+public class TETWCrate extends TileEntity implements IInventory {
 
-    private ItemStack[] stacks = new ItemStack[36];
+    private ItemStack[] stacks = new ItemStack[16];
 
     @Override
     public int getSizeInventory() {
@@ -85,7 +85,7 @@ public class TECrateMaster extends TileEntity implements IInventory {
 
     @Override
     public int getInventoryStackLimit() {
-        return 0;
+        return 64;
     }
 
     @Override
@@ -142,7 +142,7 @@ public class TECrateMaster extends TileEntity implements IInventory {
 
     @Override
     public IChatComponent getDisplayName() {
-        IChatComponent displayName = new ChatComponentText("Wooden Crate");
+        IChatComponent displayName = new ChatComponentText("Small Wooden Crate");
         return displayName;
     }
 }

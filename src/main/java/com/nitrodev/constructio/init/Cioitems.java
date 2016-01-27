@@ -1,6 +1,7 @@
 package com.nitrodev.constructio.init;
 
 import com.nitrodev.constructio.ConstructIO;
+import com.nitrodev.constructio.blocks.SmallWoodenShell;
 import com.nitrodev.constructio.items.*;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -14,6 +15,7 @@ public class Cioitems {
     public static Item itemKnife;
     public static Item itemHammer;
     public static Item itemFabric;
+    public static Item itemWoodenShell;
 
     public static void register() {
         GameRegistry.registerItem(itemPlank = new ItemPlank("item_plank"), "item_plank");
@@ -21,6 +23,7 @@ public class Cioitems {
         GameRegistry.registerItem(itemKnife = new ItemKnife("item_knife"), "item_knife");
         GameRegistry.registerItem(itemHammer = new ItemHammer("item_hammer"), "item_hammer");
         GameRegistry.registerItem(itemFabric = new ItemFabric("item_fabric"), "item_fabric");
+        GameRegistry.registerItem(itemWoodenShell = new SmallWoodenShell("item_woodenshell"), "item_woodenshell");
     }
 
     public static void registerModels() {
@@ -28,6 +31,7 @@ public class Cioitems {
         registerItemModel(itemSaw, "item_saw");
         registerItemModel(itemKnife, "item_knife");
         registerItemModel(itemHammer, "item_hammer");
+        registerItemModel(itemWoodenShell, "item_woodenshell");
     }
 
     public static void registerItemModel(final Item item, final String itemName) {

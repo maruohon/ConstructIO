@@ -1,10 +1,9 @@
 package com.nitrodev.constructio.init;
 
 import com.nitrodev.constructio.ConstructIO;
-import com.nitrodev.constructio.blocks.BlockConstructor;
 import com.nitrodev.constructio.blocks.Voider;
-import com.nitrodev.constructio.blocks.storage.TECrateMaster;
-import com.nitrodev.constructio.blocks.storage.WoodenCrate;
+import com.nitrodev.constructio.blocks.storage.SmallWoodenCrate;
+import com.nitrodev.constructio.blocks.tileentitys.TETWCrate;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -14,25 +13,20 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Cioblocks {
 
     public static Block voider = new Voider();
-    public static Block constructor = new BlockConstructor();
-    //public static Block woodenct = new Wooden();
-    public static Block woodencrate = new WoodenCrate();
+    public static Block smallWoodencrate = new SmallWoodenCrate();
 
     public static void loadTE() {
-        //GameRegistry.registerTileEntity(TileConstructor.class, "constructio_constructor");
-        GameRegistry.registerTileEntity(TECrateMaster.class, "constructio_woodencrate");
+        GameRegistry.registerTileEntity(TETWCrate.class, "constructio_smallWoodencrate");
     }
 
     public static void register() {
         GameRegistry.registerBlock(voider, "voider");
-        //GameRegistry.registerBlock(constructor, "constructor");
-        //GameRegistry.registerBlock(woodenct, "woodenCt");
-        GameRegistry.registerBlock(woodencrate, "woodenCrate");
+        GameRegistry.registerBlock(smallWoodencrate, "smallWoodenCrate");
     }
 
     public static void registerRenders() {
         registerRender(voider, "voider");
-        registerRender(woodencrate, "woodenCrate");
+        registerRender(smallWoodencrate, "smallWoodenCrate");
     }
 
     private static void registerRender(Block block, String blockName) {

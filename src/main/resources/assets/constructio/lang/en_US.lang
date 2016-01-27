@@ -1,9 +1,10 @@
 //Items
 item.item_plank.name=Plank
 item.item_saw.name=Saw
+item.item_fabric.name=Fabric
+item.item_woodenshell.name= Small Wooden Crate Shell
 //Blocks
 tile.blockVoider.name=Voider
-tile.blockConstructor.name=Constructor
-tile.woodenCt.name=Wooden Construction Block
+tile.smallWoodenCrate.name=Small Wooden Crate
 
 itemGroup.tabConstructio=ConstructIO
