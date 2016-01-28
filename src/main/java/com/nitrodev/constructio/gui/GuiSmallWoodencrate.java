@@ -14,7 +14,7 @@ public class GuiSmallWoodencrate extends GuiContainer {
     public IInventory woodencrateInventory;
 
     public GuiSmallWoodencrate(InventoryPlayer playerInv, TETWCrate tileEntity) {
-        super(new ContainerSmallWoodencrate(playerInv, tileEntity));
+        super(new ContainerWoodencrate(playerInv, tileEntity));
         this.playerInventory = playerInv;
         this.woodencrateInventory = tileEntity;
 

@@ -4,14 +4,14 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
 
-public class ContainerSmallWoodencrate extends Container {
+public class ContainerWoodencrate extends Container {
 
     public EntityPlayer player;
     private IInventory woodencrateInventory;
     static final int MachineSlots = 16;
     static final int PlayerSlots = 9*4;
 
-    public ContainerSmallWoodencrate(IInventory playerInv, IInventory tileEntity) {
+    public ContainerWoodencrate(IInventory playerInv, IInventory tileEntity) {
         this.woodencrateInventory = tileEntity;
 
         int i;

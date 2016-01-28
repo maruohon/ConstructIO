@@ -142,7 +142,7 @@ public class TETWCrate extends TileEntity implements IInventory {
 
     @Override
     public IChatComponent getDisplayName() {
-        IChatComponent displayName = new ChatComponentText("Small Wooden Crate");
+        IChatComponent displayName = new ChatComponentText("Wooden Crate");
         return displayName;
     }
 }

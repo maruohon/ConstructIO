@@ -13,12 +13,12 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-public class SmallWoodenCrate extends Block {
+public class WoodenCrate extends Block {
 
-    public SmallWoodenCrate() {
+    public WoodenCrate() {
         super(Material.wood);
 
-        this.setUnlocalizedName("tinyWoodenCrate");
+        this.setUnlocalizedName("woodencrate");
         this.setCreativeTab(ConstructIO.tabconstructio);
         this.setStepSound(soundTypeWood);
     }

@@ -1,0 +1,12 @@
+{
+  "parent":"block/cube_all",
+  "textures": {
+    "particle": "constructio:blocks/blockWoodencrate_side",
+    "north": "constructio:blocks/blockWoodencrate_side",
+    "east": "constructio:blocks/blockWoodencrate_side",
+    "south": "constructio:blocks/blockWoodencrate_side",
+    "west": "constructio:blocks/blockWoodencrate_side",
+    "up": "constructio:blocks/blockWoodencrate_top",
+    "down": "constructio:blocks/blockWoodencrate_bottom"
+  }
+}

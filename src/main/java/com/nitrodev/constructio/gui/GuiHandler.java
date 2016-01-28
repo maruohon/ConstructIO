@@ -20,7 +20,7 @@ public class GuiHandler implements IGuiHandler {
                 tileEntity = world.getTileEntity(new BlockPos(x, y, z));
 
                 if (tileEntity instanceof TETWCrate) {
-                    return new ContainerSmallWoodencrate(player.inventory, (TETWCrate) tileEntity);
+                    return new ContainerWoodencrate(player.inventory, (TETWCrate) tileEntity);
                 }
                 break;
         }

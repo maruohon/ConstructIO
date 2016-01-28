@@ -1,12 +1,19 @@
 {
-  "parent":"builtin/generated",
+  "parent":"block/cube",
   "textures": {
-    "particle": "constructio:blocks/blockSmallWoodenshell_side",
-    "north": "constructio:blocks/blockSmallWoodenshell_side",
-    "east": "constructio:blocks/blockSmallWoodenshell_side",
-    "south": "constructio:blocks/blockSmallWoodenshell_side",
-    "west": "constructio:blocks/blockSmallWoodenshell_side",
-    "up": "constructio:blocks/blockSmallWoodencrate_top",
-    "down": "constructio:blocks/blockSmallWoodenshell_bottom"
+    "particle": "constructio:blocks/blockWoodenshell_side",
+    "north": "constructio:blocks/blockWoodenshell_side",
+    "east": "constructio:blocks/blockWoodenshell_side",
+    "south": "constructio:blocks/blockWoodenshell_side",
+    "west": "constructio:blocks/blockWoodenshell_side",
+    "up": "constructio:blocks/blockWoodencrate_top",
+    "down": "constructio:blocks/blockWoodenshell_bottom"
+  },
+  "display": {
+    "thirdperson": {
+      "rotation": [ 10, -45, 170 ],
+      "translation": [ 0, 1.5, -2.75 ],
+      "scale": [ 0.375, 0.375, 0.375 ]
+    }
   }
 }
