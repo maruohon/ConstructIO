@@ -20,6 +20,7 @@ public class ModRecipes {
     public static void init() {
         //Items
         GameRegistry.addShapelessRecipe(new ItemStack(Cioitems.itemPlank), saw, slab);
+        GameRegistry.addShapelessRecipe(new ItemStack(Cioitems.itemFabric, 1, 3), stick);
         GameRegistry.addRecipe(
                 new ItemStack(Cioitems.itemSaw),
                 "ss ",
