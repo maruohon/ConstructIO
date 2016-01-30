@@ -22,7 +22,7 @@ public class Cioitems {
         GameRegistry.registerItem(itemSaw = new ItemSaw("item_saw"), "item_saw");
         GameRegistry.registerItem(itemKnife = new ItemKnife("item_knife"), "item_knife");
         GameRegistry.registerItem(itemHammer = new ItemHammer("item_hammer"), "item_hammer");
-        GameRegistry.registerItem(itemFabric = new ItemFabric("item_fabric"), "item_fabric");
+        GameRegistry.registerItem(itemFabric = new ItemFabric(), "fabric");
         GameRegistry.registerItem(itemWoodenShell = new WoodenShell("item_woodenshell"), "item_woodenshell");
     }
 
@@ -32,6 +32,9 @@ public class Cioitems {
         registerItemModel(itemKnife, "item_knife");
         registerItemModel(itemHammer, "item_hammer");
         registerItemModel(itemWoodenShell, "item_woodenshell");
+        for (int i = 0; i < 16; i++) {
+            registerItemModel(itemFabric, i, "fabric" + i);
+        }
     }
 
     public static void registerItemModel(final Item item, final String itemName) {

@@ -1,10 +1,30 @@
 //Items
 item.item_plank.name=Plank
+//Tools
 item.item_saw.name=Saw
-item.item_fabric.name=Fabric
+item.item_knife.name=Knife
+//Fabrics
+item.fabric_white.name=Fabric
+item.fabric_orange.name=Orange Fabric
+item.fabric_magenta.name=Magenta Fabric
+item.fabric_light_blue.name=Light Blue Fabric
+item.fabric_yellow.name=Yellow Fabric
+item.fabric_lime.name=Lime Fabric
+item.fabric_pink.name=Pink Fabric
+item.fabric_gray.name=Gray Fabric
+item.fabric_light_gray.name=Light Gray Fabric
+item.fabric_cyan.name=Cyan Fabric
+item.fabric_purple.name=Purple Fabric
+item.fabric_blue.name=Blue Fabric
+item.fabric_brown.name=Brown Fabric
+item.fabric_green.name=Green Fabric
+item.fabric_red.name=Red Fabric
+item.fabric_black.name=Black Fabric
+
+//ItemBlocks
 item.item_woodenshell.name= Small Wooden Crate Shell
 //Blocks
 tile.blockVoider.name=Voider
-tile.smallWoodenCrate.name=Small Wooden Crate
+tile.woodencrate.name=Wooden Crate
 
 itemGroup.tabConstructio=ConstructIO

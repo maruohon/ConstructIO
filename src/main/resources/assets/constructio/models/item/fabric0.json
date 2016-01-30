@@ -1,0 +1,13 @@
+{
+  "parent": "buildin/generated",
+  "textures": {
+    "layer0":"constructio:items/fabric/fabric_white"
+  },
+  "display": {
+    "firstperson": {
+      "rotation": [0, 260, -40],
+      "translation": [0, 4, 0],
+      "scale": [ 1, 1, 1]
+    }
+  }
+}

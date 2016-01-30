@@ -5,17 +5,22 @@ import com.nitrodev.constructio.ConstructioTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 
-public class ItemKnife extends Item {
+public class ItemKnife extends ItemSword {
 
 
     public ItemKnife(String unlocalisedName) {
-        super();
+        super(ToolMaterial.IRON);
 
         this.setUnlocalizedName("item_knife");
         this.setCreativeTab(ConstructIO.tabconstructio);
         this.setMaxDamage(100);
+    }
 
+    @Override
+    public float getDamageVsEntity() {
+        return 1.0f;
     }
 
     @Override
