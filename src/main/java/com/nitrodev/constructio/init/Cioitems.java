@@ -33,7 +33,7 @@ public class Cioitems {
         registerItemModel(itemHammer, "item_hammer");
         registerItemModel(itemWoodenShell, "item_woodenshell");
         for (int i = 0; i < 16; i++) {
-            registerItemModel(itemFabric, i, "fabric" + i);
+            registerItemModel(itemFabric, i,"fabric/" + "fabric" + i);
         }
     }
 
