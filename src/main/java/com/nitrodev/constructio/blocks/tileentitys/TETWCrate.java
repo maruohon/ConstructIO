@@ -49,9 +49,9 @@ public class TETWCrate extends TileEntity implements IInventory {
     @Override
     public ItemStack removeStackFromSlot(int index) {
         if (this.stacks[index] != null) {
-            ItemStack lvt_2_1_ = this.stacks[index];
+            ItemStack stack = this.stacks[index];
             this.stacks[index] = null;
-            return lvt_2_1_;
+            return stack;
         } else {
             return null;
         }
@@ -60,11 +60,11 @@ public class TETWCrate extends TileEntity implements IInventory {
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
-        NBTTagList lvt_2_1_ = compound.getTagList("Items", 10);
+        NBTTagList tagList = compound.getTagList("Items", 10);
         this.stacks = new ItemStack[this.getSizeInventory()];
 
-        for (int lvt_3_1_ = 0; lvt_3_1_ < lvt_2_1_.tagCount(); ++lvt_3_1_) {
-            NBTTagCompound lvt_4_1_ = lvt_2_1_.getCompoundTagAt(lvt_3_1_);
+        for (int lvt_3_1_ = 0; lvt_3_1_ < tagList.tagCount(); ++lvt_3_1_) {
+            NBTTagCompound lvt_4_1_ = tagList.getCompoundTagAt(lvt_3_1_);
             int lvt_5_1_ = lvt_4_1_.getByte("Slot") & 255;
             if (lvt_5_1_ >= 0 && lvt_5_1_ < this.stacks.length) {
                 this.stacks[lvt_5_1_] = ItemStack.loadItemStackFromNBT(lvt_4_1_);
