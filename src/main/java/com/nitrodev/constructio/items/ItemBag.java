@@ -1,6 +1,7 @@
 package com.nitrodev.constructio.items;
 
 import com.nitrodev.constructio.ConstructIO;
+import com.nitrodev.constructio.gui.GuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,8 +18,10 @@ public class ItemBag extends Item {
     }
 
     @Override
-    public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
-        return super.onItemUse(stack, playerIn, worldIn, pos, side, hitX, hitY, hitZ);
+    public boolean onItemUse(ItemStack stack, EntityPlayer player, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
+
+        player.openGui(ConstructIO.instance, GuiHandler.GUI_Bag, worldIn, pos.getX(), pos.getY(), pos.getZ());
+        return true;
     }
 
 }

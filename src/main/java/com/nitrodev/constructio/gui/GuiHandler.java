@@ -1,6 +1,7 @@
 package com.nitrodev.constructio.gui;
 
 import com.nitrodev.constructio.blocks.tileentitys.TETWCrate;
+import com.nitrodev.constructio.init.Cioitems;
 import com.nitrodev.constructio.inventory.InventoryBag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -28,7 +29,10 @@ public class GuiHandler implements IGuiHandler {
                 }
                 break;
             case GUI_Bag:
-                return new ContainerBag(player.inventory, (InventoryBag) stack);
+                stack = player.getCurrentEquippedItem();
+                if (stack != null && stack.getItem() == Cioitems.itemBag) {
+                    return new ContainerBag(player.inventory, new InventoryBag(stack, 18, false, player));
+                }
         }
         return null;
     }
@@ -36,6 +40,7 @@ public class GuiHandler implements IGuiHandler {
     @Override
     public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileEntity;
+        ItemStack stack;
 
         switch (id)
         {
@@ -44,6 +49,12 @@ public class GuiHandler implements IGuiHandler {
 
                 if (tileEntity instanceof TETWCrate) {
                     return new GuiWoodencrate(player.inventory, (TETWCrate) tileEntity);
+                }
+                break;
+            case GUI_Bag:
+                stack = player.getCurrentEquippedItem();
+                if (stack != null && stack.getItem() == Cioitems.itemBag) {
+                    return new ContainerBag(player.inventory, new InventoryBag(stack, 18, false, player));
                 }
 
         }
