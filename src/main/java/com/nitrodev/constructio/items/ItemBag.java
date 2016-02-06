@@ -18,10 +18,11 @@ public class ItemBag extends Item {
     }
 
     @Override
-    public boolean onItemUse(ItemStack stack, EntityPlayer player, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
+        if (world.isRemote == false) {
+            player.openGui(ConstructIO.instance, GuiHandler.GUI_Bag, world, (int) player.posX, (int) player.posY, (int) player.posZ);
+        }
 
-        player.openGui(ConstructIO.instance, GuiHandler.GUI_Bag, worldIn, pos.getX(), pos.getY(), pos.getZ());
-        return true;
+        return itemStack;
     }
-
 }

@@ -54,7 +54,7 @@ public class GuiHandler implements IGuiHandler {
             case GUI_Bag:
                 stack = player.getCurrentEquippedItem();
                 if (stack != null && stack.getItem() == Cioitems.itemBag) {
-                    return new ContainerBag(player.inventory, new InventoryBag(stack, 18, false, player));
+                    return new GuiBag(player.inventory, new InventoryBag(stack, 18, false, player));
                 }
 
         }

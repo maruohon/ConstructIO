@@ -19,7 +19,7 @@ public class ContainerBag extends Container {
         int x;
         for (y = 0; y < 2; ++y) {
             for (x = 0; x < 9; ++x) {
-                this.addSlotToContainer(new Slot(bagInv, y * 9 + x, 52 + x * 15, 35 + y * 18));
+                this.addSlotToContainer(new Slot(bagInv, y * 9 + x, 8 + x * 18, 81 + y * 18));
             }
         }
 
