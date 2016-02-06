@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTUtil;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IChatComponent;
 
 import java.util.UUID;
@@ -252,7 +253,8 @@ public class InventoryBag implements IInventory {
 
     @Override
     public IChatComponent getDisplayName() {
-        return null;
+        IChatComponent displayName = new ChatComponentText("Bag");
+        return displayName;
     }
 
     public static ItemStack getItemStackByUUID(IInventory inv, UUID uuid, String containerTagName) {

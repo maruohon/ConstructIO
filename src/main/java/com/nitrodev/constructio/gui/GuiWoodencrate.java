@@ -7,13 +7,13 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
-public class GuiSmallWoodencrate extends GuiContainer {
+public class GuiWoodencrate extends GuiContainer {
 
     private static final ResourceLocation woodencrateGuiTextures = new ResourceLocation("constructio:textures/gui/smallwoodencrate.png");
     private final InventoryPlayer playerInventory;
     public IInventory woodencrateInventory;
 
-    public GuiSmallWoodencrate(InventoryPlayer playerInv, TETWCrate tileEntity) {
+    public GuiWoodencrate(InventoryPlayer playerInv, TETWCrate tileEntity) {
         super(new ContainerWoodencrate(playerInv, tileEntity));
         this.playerInventory = playerInv;
         this.woodencrateInventory = tileEntity;

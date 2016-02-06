@@ -16,6 +16,7 @@ public class Cioitems {
     public static Item itemHammer;
     public static Item itemFabric;
     public static Item itemWoodenShell;
+    public static Item itemBag;
 
     public static void register() {
         GameRegistry.registerItem(itemPlank = new ItemPlank("item_plank"), "item_plank");
@@ -24,6 +25,7 @@ public class Cioitems {
         GameRegistry.registerItem(itemHammer = new ItemHammer("item_hammer"), "item_hammer");
         GameRegistry.registerItem(itemFabric = new ItemFabric(), "fabric");
         GameRegistry.registerItem(itemWoodenShell = new WoodenShell("item_woodenshell"), "item_woodenshell");
+        GameRegistry.registerItem(itemBag = new ItemBag(), "bag");
     }
 
     public static void registerModels() {
