@@ -68,6 +68,6 @@ public class RandomUtils {
             nbt.removeTag(tagName);
         }
 
-        NBTUtils.setRootCompoundTag(containerStack, nbt);
+        //NBTUtils.setRootCompoundTag(containerStack, nbt);
     }
 }

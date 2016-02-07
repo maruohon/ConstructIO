@@ -5,7 +5,7 @@ import com.nitrodev.constructio.init.Cioblocks;
 import com.nitrodev.constructio.init.Cioitems;
 import com.nitrodev.constructio.proxy.CommonProxy;
 import com.nitrodev.constructio.recipes.ModRecipes;
-import net.minecraftforge.common.MinecraftForge;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;

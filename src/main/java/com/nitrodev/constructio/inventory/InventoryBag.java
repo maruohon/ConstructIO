@@ -1,17 +1,15 @@
 package com.nitrodev.constructio.inventory;
 
+import java.util.UUID;
+
 import com.nitrodev.constructio.utils.NBTUtils;
 import com.nitrodev.constructio.utils.RandomUtils;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IChatComponent;
-
-import java.util.UUID;
 
 public class InventoryBag implements IInventory {
 
@@ -68,7 +66,6 @@ public class InventoryBag implements IInventory {
     }
 
     public ItemStack getContainerItemStack() {
-        //System.out.println("InventoryItem#getContainerItemStack() - " + (this.isRemote ? "client" : "server"));
         if (this.containerUUID != null && this.hostInv != null) {
             return getItemStackByUUID(this.hostInv, this.containerUUID, "UUID");
         }

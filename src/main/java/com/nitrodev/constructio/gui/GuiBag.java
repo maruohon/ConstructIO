@@ -1,22 +1,21 @@
 package com.nitrodev.constructio.gui;
 
-import com.nitrodev.constructio.inventory.InventoryBag;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiBag extends GuiContainer {
 
     private static final ResourceLocation bagGuiTextures = new ResourceLocation("constructio:textures/gui/bag.png");
+    private final ContainerBag containerBag;
     private final InventoryPlayer playerInv;
-    public IInventory bagInv;
 
-    public GuiBag(InventoryPlayer playerinv, InventoryBag bagInv) {
-        super(new ContainerBag(playerinv, bagInv));
-        this.playerInv = playerinv;
-        this.bagInv = bagInv;
+    public GuiBag(EntityPlayer player, ContainerBag containerBag) {
+        super(containerBag);
+        this.playerInv = player.inventory;
+        this.containerBag = containerBag;
 
         this.ySize = 212;
         this.xSize = 212;
@@ -24,7 +23,7 @@ public class GuiBag extends GuiContainer {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        String name = this.bagInv.getDisplayName().getUnformattedText();
+        String name = this.containerBag.bagInv.getDisplayName().getUnformattedText();
         this.fontRendererObj.drawString(name, 42, 22, 4210752);
         this.fontRendererObj.drawString(this.playerInv.getDisplayName().getUnformattedText(), 8, 120, 4210752);
     }

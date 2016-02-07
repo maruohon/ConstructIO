@@ -98,7 +98,7 @@ public class NBTUtils {
             nbt.setLong("UUIDL", uuid.getLeastSignificantBits());
         }
 
-        return null;
+        return uuid;
     }
 
     public static UUID getUUIFromNBT(NBTTagCompound nbt) {

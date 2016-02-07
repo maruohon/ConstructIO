@@ -1,19 +1,27 @@
 package com.nitrodev.constructio.gui;
 
+import java.util.UUID;
+
+import com.nitrodev.constructio.inventory.InventoryBag;
+import com.nitrodev.constructio.utils.NBTUtils;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 public class ContainerBag extends Container {
 
-    private IInventory bagInv;
+    public final InventoryBag bagInv;
+    public final UUID containerUUID;
     static final int MachineSlots = 18;
     static final int PlayerSlots = 9*4;
 
-    public ContainerBag(IInventory player, IInventory bagInv) {
-        this.bagInv = bagInv;
+    public ContainerBag(EntityPlayer player, ItemStack containerStack) {
+        this.containerUUID = NBTUtils.getUUIDFromItemStack(containerStack, "UUID", true);
+        this.bagInv = new InventoryBag(containerStack, 18, player.worldObj.isRemote, player);
+        this.bagInv.setHostInv(player.inventory, this.containerUUID);
+        this.bagInv.readFromContainerItemStack();
 
         int y;
         int x;
@@ -25,12 +33,12 @@ public class ContainerBag extends Container {
 
         for(x = 0; x < 3; ++x) {
             for(y = 0; y < 9; ++y) {
-                this.addSlotToContainer(new Slot(player, y + x * 9 + 9, 8 + y * 18, 130 + x * 18));
+                this.addSlotToContainer(new Slot(player.inventory, y + x * 9 + 9, 8 + y * 18, 130 + x * 18));
             }
         }
 
         for(x = 0; x < 9; ++x) {
-            this.addSlotToContainer(new Slot(player, x, 8 + x * 18, 188));
+            this.addSlotToContainer(new Slot(player.inventory, x, 8 + x * 18, 188));
         }
     }
 
